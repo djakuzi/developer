@@ -1,0 +1,50 @@
+
+.dataMeInfo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #242424;
+    border-radius: 10px;
+}
+
+.img img{
+    width: 25px;
+    height: 25px;
+}
+
+.wrapper{
+    width: 190px;
+}
+
+.title{
+    color: #cecece2f;
+    font-size: 15px;
+    font-weight: bolder;
+    
+}
+
+.info{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.info[href^='mailto:'], .info[href^='tel:'] {
+    background-image: linear-gradient(currentColor, #242424);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: background-size .4s;
+}
+
+.info[href^='mailto:']:hover, .info[href^='tel:']:hover{
+    background-size: 100% 1px;
+}

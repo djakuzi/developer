@@ -1,0 +1,17 @@
+
+.projects{
+
+}
+
+.projectsList {
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+@media(max-width: 550px) {
+    .projectsList {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

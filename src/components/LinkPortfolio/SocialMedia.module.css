@@ -1,0 +1,12 @@
+
+.linkPortfolio{
+    font-size: 17px;
+}
+
+.linkPortfolio:hover{
+    color: rgba(228, 215, 252, 0.905);
+}
+
+.active {
+    color: rgba(182, 149, 244, 0.905);
+}

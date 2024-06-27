@@ -1,0 +1,64 @@
+.shadow {
+    z-index: 2;
+    display: none;
+    width: 1000vh;
+    height: 1000vh;
+    position: absolute;
+    top: -70px;
+    background-color: rgba(0, 0, 0, 0.62);
+}
+
+.homePage{
+    position: relative;
+    max-width: 1300px;
+    height: 100vh;
+    padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    /* background-color: #242424; */
+    gap: 50px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+@media(max-width:900px){
+    .homePage{
+        flex-direction: column;
+        justify-items: center;
+        padding:  0px 20px;
+        gap: 20px;
+    }
+
+    .burger {
+        margin-top: 10px;
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
+
+    .burger img {
+        width: 100%;
+    }
+
+
+    @keyframes openShadow {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .open {
+        display: block;
+        animation: openShadow .7s forwards;
+    }
+
+}

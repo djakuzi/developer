@@ -1,0 +1,61 @@
+
+
+
+.projectsCard{
+    position: relative;
+    cursor: pointer;
+    transition: all .3s ease;
+    /* background-color: antiquewhite; */
+}
+
+.projectsCard:hover{
+    transform: scale(1.02);
+}
+
+
+.img{
+    overflow: hidden;
+    /* height: 250px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center */
+}
+
+.img img{
+    /* object-fit: contain; */
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    width: 100%;
+}
+
+.name{
+    text-align: center;
+    font-size: clamp(0.938rem, 0.852rem + 0.455vw, 1.25rem);
+    font-weight: bold;
+    background-color: #00000083;
+    padding: 10px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.details{
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background-color: rgba(60, 60, 60, 0.428);
+}
+
+.details div{
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.details:hover{
+    opacity: 1;
+}
