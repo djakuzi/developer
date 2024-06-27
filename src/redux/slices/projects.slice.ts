@@ -3,14 +3,13 @@ import { ProjectsCardProps } from "../../components/ProjectsCard/ProjectsCard.pr
 
 
 export interface ProjectsDetails{
-    valid: boolean;
-    projects: ProjectsCardProps | {};
-    sort: string;
+    validDetails: boolean;
+    projects?: ProjectsCardProps;
+    sort: 'all' | 'ready' | 'in developing';
 }
 
 const initialState: ProjectsDetails = {
-    valid: false,
-    projects: {},
+    validDetails: false,
     sort: 'all'
 }
 
@@ -19,12 +18,18 @@ export const projectSlice = createSlice({
     initialState,
     reducers:{
         close(state){
-            state.valid = false
-            state.projects = {}
+            state = {
+                validDetails: state.validDetails = false,
+                sort: state.sort 
+            }
+            
         },
         open(state, action:PayloadAction<{projects:ProjectsCardProps}>){
-            state.valid = true
+            state.validDetails = true
             state.projects = action.payload.projects
+        },
+        sort(state, action: PayloadAction<{sort: 'all' | 'ready' | 'in developing'}>){
+            state.sort = action.payload.sort
         }
     }
 })

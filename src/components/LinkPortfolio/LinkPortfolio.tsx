@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { NavLink } from 'react-router-dom'
-import styles from './SocialMedia.module.css'
-import { LinkPortfolioProps } from './SocialMedia.props'
+import styles from './LinkPortfolio.module.css'
+import { LinkPortfolioProps } from './LinkPortfolio.props'
 
 export default function LinkPortfolio(props:LinkPortfolioProps){
 

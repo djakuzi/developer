@@ -1,0 +1,232 @@
+
+@keyframes openWindow {
+    from{
+        transform: translateY(-10000px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes shadowWindow {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.window{
+    padding: 20px;
+    display: none;
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background-color: rgba(49, 49, 49, 0.846);
+    animation: shadowWindow .3s forwards;
+}
+
+.open{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 30px;
+    padding: 20px 20px;
+    background-color: #ffffff;
+    animation: openWindow 1s forwards;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+}
+
+.container::-webkit-scrollbar {
+    width: 0px;
+}
+
+
+.close {
+    /* margin-top: 20px; */
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.close img {
+    width: 100%;
+}
+
+
+.img{
+    max-width: 560px;
+    
+    /* margin: 0 auto; */
+}
+
+.img img{
+    border: 1px solid black;
+    border-radius: 30px;
+    width: 100%;
+}
+
+.name{
+    font-size:  24px;
+    font-weight: bold;
+    color: black;
+}
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.version{
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+    color: black;
+    border: 1px solid #ff5e5e;
+    background-color: #ff5e5e;
+    border-radius: 20px;
+}
+
+.version::before {
+    position: absolute;
+    content: 'Статус';
+    background-color: #333333;
+    padding: 3px;
+    font-size: 12px;
+    border-radius: 10px;
+    transform: translateY(-23px);
+    color: white;
+}
+
+.colorChange{
+    background-color: #7e5eff;
+}
+
+.link {
+    cursor: pointer;
+    background-color: #333333;
+    border: 1px solid #333333;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    transition: all .3s ease;
+}
+
+.link:hover {
+    transform: scale(1.02);
+    border: 1px solid #333333;
+    background-color: white;
+    color: black;
+}
+
+.addition{
+    width: 100%;
+    margin-top: 10px;
+    position: relative;
+    font-size: 18px;
+    color: black;
+    border: 1px solid #333333;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.addition::before{
+    position: absolute;
+    content: 'Примечание';
+    background-color: #333333;
+    padding: 3px;
+    font-size: 12px;
+    border-radius: 10px;
+    transform: translateY(-20px);
+    color: white;
+}
+
+.possibilities{
+    cursor: pointer;
+    width: 100%;
+    color: black;
+}
+
+.title{
+    font-size: 20px;
+    text-decoration:underline;
+    font-weight: bold;
+}
+
+.technologies{
+    cursor: pointer;
+    width: 100%;
+    color: black;
+}
+
+@media(max-width: 700px){
+    .name {
+        font-size: 18px;
+    }
+    .version{
+        font-size: 16px;
+    }
+
+    .link{
+        font-size: 16px;
+    }
+
+    .addition{
+        font-size: 15px;
+    }
+
+    .title{
+        font-size: 16px;
+    }
+
+
+}
+
+@media(max-width: 390px) {
+    .wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .img img{
+        border-radius: 20px;
+    }
+
+    .link{
+        text-align: center;
+    }
+
+    .addition{
+        font-size: 13px;
+    }
+
+    .possibilities{
+        font-size: 14px;
+    }
+
+    .technologies{
+        font-size: 14px;
+    }
+}

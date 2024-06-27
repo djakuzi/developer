@@ -3,6 +3,25 @@
 
 }
 
+.sort{
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    background-color: black;
+    max-width: 300px;
+    padding: 5px;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+
+}
+
+.sort::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
 .projectsList {
 
     display: grid;
@@ -13,5 +32,11 @@
 @media(max-width: 550px) {
     .projectsList {
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media(max-width: 500px) {
+    .sort {
+        max-width: 260px;
     }
 }

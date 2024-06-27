@@ -1,7 +1,16 @@
+import { SortProjectsCardProps } from "../components/SortProjectsCard/SortProjectsCard.props";
 
-export const DATA_SORT_PROJECTS =[
+export const DATA_SORT_PROJECTS: SortProjectsCardProps[] =[
     {
         title: 'Все',
-        sort: 'All'
+        sort: 'all',
+    },
+    {
+        title: "Завершенные",
+        sort: 'ready'
+    },
+    {
+        title: "В разработке",
+        sort: "in developing" ,
     }
 ]

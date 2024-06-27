@@ -7,13 +7,20 @@ import { useDispatch } from 'react-redux'
 import { AppDispatch, RootState } from '../../redux/store'
 import { burgerActions } from '../../redux/slices/burger.slice'
 import { useSelector } from 'react-redux'
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 
 export default function HomePage(){
 
     const dispatch = useDispatch<AppDispatch>()
     const {valid} = useSelector( (s:RootState) => s.burger)
+    const navigate = useNavigate()
 
+    useEffect(()=>{
+        navigate('/developer/resume')
+    },[])
     return (
         <div  className={styles.homePage}>
 
@@ -28,6 +35,7 @@ export default function HomePage(){
             </div>
             <MyInfo></MyInfo>
             <Portfolio></Portfolio>
+
         </div>
     )
 }

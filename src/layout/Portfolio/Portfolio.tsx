@@ -1,6 +1,9 @@
 
+import { useSelector } from 'react-redux'
 import { Outlet } from 'react-router-dom'
-import LinkPortfolio from '../../components/LinkPortfolio/SocialMedia'
+import LinkPortfolio from '../../components/LinkPortfolio/LinkPortfolio'
+import WindowMoreInfoProject from '../../components/WindowMoreInfoProject/WindowMoreInfoProject'
+import { RootState } from '../../redux/store'
 import styles from './Portfolio.module.css'
 
 
@@ -21,7 +24,7 @@ const LINK_PORTFOLIO = [
 
 export default function Portfolio(){
 
-  
+    const {projects} = useSelector( (s:RootState) => s.projects)
 
     return (
         <div className={styles.portfolio}>
@@ -34,6 +37,7 @@ export default function Portfolio(){
                 <Outlet></Outlet>
             </div>
 
+            { projects && <WindowMoreInfoProject {...projects} />}
 
 
         </div>

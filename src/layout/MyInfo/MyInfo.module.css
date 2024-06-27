@@ -33,6 +33,12 @@
     border-radius: 30px;
     background-color: #333333;
     overflow-y: scroll;
+    overflow-x: hidden;
+    border-bottom: 5px solid rgb(184, 184, 184);
+}
+
+.myInfo::-webkit-scrollbar{
+    width: 0px;
 }
 
 .wrapper_img{
@@ -80,7 +86,6 @@
 }
 
 .info{
- 
     display: flex;
     flex-direction: column;
     gap: 20px;
