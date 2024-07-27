@@ -71,6 +71,9 @@ const DATA_OTHER =[
     },
     {
         title: 'Agile'
+    },
+    {
+        title: 'Scrum'
     }
 
 ]

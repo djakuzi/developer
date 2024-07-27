@@ -19,7 +19,7 @@ export default function HomePage(){
     const navigate = useNavigate()
 
     useEffect(()=>{
-        navigate('/developer/resume')
+        navigate('/resume')
     },[])
     return (
         <div  className={styles.homePage}>

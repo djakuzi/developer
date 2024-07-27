@@ -12,7 +12,7 @@ import { store } from './redux/store'
 
 const Router = createBrowserRouter([
   {
-    path: '/developer',
+    path: '/',
     element: <HomePage />,
     children:[
       {
@@ -34,7 +34,7 @@ const Router = createBrowserRouter([
     element: <>Произошла ошибка{'((('}</>,
   }
 
-])
+], {basename: '/developer'})
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

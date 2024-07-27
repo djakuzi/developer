@@ -9,11 +9,11 @@ import styles from './Portfolio.module.css'
 
 const LINK_PORTFOLIO = [
     {
-        link: '/developer/resume',
+        link: '/resume',
         title: 'Резюме'
     },
     {
-        link: '/developer/projects',
+        link: '/projects',
         title: 'Pet-проекты'
     },
     // {
